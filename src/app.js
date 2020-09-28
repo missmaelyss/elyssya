@@ -6,7 +6,8 @@ import {
 } from "react-router-dom";
 import MyNavbar from './navbar';
 import Footer from './footer';
-
+import Home from './home';
+import "./index.css";
 // This example show how you could create a custom
 // <Link> that renders something special when the URL
 // is the same as the one the <Link> points to.
@@ -14,7 +15,7 @@ import Footer from './footer';
 export default function MyApp() {
   return (
     <>
-      <MyNavbar />
+      {/* <MyNavbar /> */}
       <Router>
         <div>
           <Switch>
@@ -39,24 +40,22 @@ export default function MyApp() {
           </Switch>
         </div>
       </Router>
-      <Footer>
-        Made with React
-      </Footer>
+      {/* <Footer>
+        <img
+          src="/by.png"
+          width="200"
+          className="d-inline-block align-top"
+          alt=""
+        />
+      </Footer> */}
     </>
   );
 }
 
-function Home() {
-  return (
-    <div>
-      <h2>Home</h2>
-    </div>
-  );
-}
 
 function Project() {
   return (
-    <div>
+    <div className="background_project">
       <h2>Project</h2>
     </div>
   );
@@ -64,7 +63,7 @@ function Project() {
 
 function Experience() {
   return (
-    <div>
+    <div className="background_experience">
       <h2>Experience</h2>
     </div>
   );
@@ -72,7 +71,7 @@ function Experience() {
 
 function Contact() {
   return (
-    <div>
+    <div className="background_contact">
       <h2>Contact</h2>
     </div>
   );
