@@ -6,6 +6,7 @@ import {
   Link,
   useRouteMatch
 } from "react-router-dom";
+import MyNavbar from './navbar';
 
 // This example show how you could create a custom
 // <Link> that renders something special when the URL
@@ -13,41 +14,33 @@ import {
 
 export default function CustomLinkExample() {
   return (
-    <Router>
-      <div>
-        <OldSchoolMenuLink
-          activeOnlyWhenExact={true}
-          to="/"
-          label="Home"
-        />
-        <OldSchoolMenuLink to="/about" label="About" />
-
-        <hr />
-
-        <Switch>
-          <Route exact path="/">
-            <Home />
-          </Route>
-          <Route path="/about">
-            <About />
-          </Route>
-        </Switch>
-      </div>
-    </Router>
-  );
-}
-
-function OldSchoolMenuLink({ label, to, activeOnlyWhenExact }) {
-  let match = useRouteMatch({
-    path: to,
-    exact: activeOnlyWhenExact
-  });
-
-  return (
-    <div className={match ? "active" : ""}>
-      {match && "> "}
-      <Link to={to}>{label}</Link>
-    </div>
+    <>
+      <MyNavbar />
+      <Router>
+        <div>
+          <Switch>
+            <Route exact path="/">
+              <Home />
+            </Route>
+            <Route path="/home">
+              <Home />
+            </Route>
+            <Route path="/project">
+              <Project />
+            </Route>
+            <Route path="/experience">
+              <Experience />
+            </Route>
+            <Route path="/contact">
+              <Contact />
+            </Route>
+            <Route path="/*">
+              <Error />
+            </Route>
+          </Switch>
+        </div>
+      </Router>
+    </>
   );
 }
 
@@ -59,10 +52,37 @@ function Home() {
   );
 }
 
-function About() {
+function Project() {
   return (
     <div>
-      <h2>About</h2>
+      <h2>Project</h2>
     </div>
   );
 }
+
+function Experience() {
+  return (
+    <div>
+      <h2>Experience</h2>
+    </div>
+  );
+}
+
+function Contact() {
+  return (
+    <div>
+      <h2>Contact</h2>
+    </div>
+  );
+}
+
+function Error() {
+  return (
+    <div>
+      <h2>404</h2>
+    </div>
+  );
+}
+
+
+
