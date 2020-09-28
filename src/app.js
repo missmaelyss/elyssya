@@ -3,16 +3,15 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link,
-  useRouteMatch
 } from "react-router-dom";
 import MyNavbar from './navbar';
+import Footer from './footer';
 
 // This example show how you could create a custom
 // <Link> that renders something special when the URL
 // is the same as the one the <Link> points to.
 
-export default function CustomLinkExample() {
+export default function MyApp() {
   return (
     <>
       <MyNavbar />
@@ -40,6 +39,9 @@ export default function CustomLinkExample() {
           </Switch>
         </div>
       </Router>
+      <Footer>
+        Made with React
+      </Footer>
     </>
   );
 }
