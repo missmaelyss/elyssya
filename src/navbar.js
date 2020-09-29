@@ -11,7 +11,7 @@ var style = {
 export default function MyNavbar() {
     return (
         <>
-          <Navbar bg="light" fixed="top">
+          <Navbar bg="light">
             {/* <Nav.Item>
               <img
                 src="/elyssya.png"

@@ -1,35 +1,29 @@
 import React from "react";
 import Jumbotron from 'react-bootstrap/Jumbotron'
 import Button from 'react-bootstrap/Button'
-import MyNavbar from './navbar';
-import Footer from './footer';
+
 import './index.css';
 
 function Home() {
     return (
-        <div className="background_home">
-            <MyNavbar />
-            <div>
-                <Jumbotron>
-                    <h1>Hello, world!</h1>
-                    <p>
-                        This is a simple hero unit, a simple jumbotron-style component for calling
-                        extra attention to featured content or information.
-                    </p>
-                    <p>
-                        <Button variant="primary">Learn more</Button>
-                    </p>
-                </Jumbotron>
-            </div>
-            <Footer>
-                <img
-                src="/by.png"
-                width="200"
-                className="d-inline-block align-top"
-                alt=""
-                />
-            </Footer> 
+        <>
+        <div>
+            Welcome to my website. 
+            Immerse yourself in my universe, through the various projects that I have achieved and my professional experiences.
+            Do not hesitate to contact me.
+            Enjoy
         </div>
+        <div>
+            <div>
+                Let's see my projects !
+                <Button>Go</Button>
+            </div>
+            <div>
+                Let's see my professional experiences !
+                <Button>Go</Button>
+            </div>
+        </div>
+        </>
     );
 }
 

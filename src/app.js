@@ -7,6 +7,9 @@ import {
 import MyNavbar from './navbar';
 import Footer from './footer';
 import Home from './home';
+import Project from './project';
+import Experience from './experience';
+import Contact from './contact';
 import "./index.css";
 // This example show how you could create a custom
 // <Link> that renders something special when the URL
@@ -15,7 +18,7 @@ import "./index.css";
 export default function MyApp() {
   return (
     <>
-      {/* <MyNavbar /> */}
+      <MyNavbar />
       <Router>
         <div>
           <Switch>
@@ -40,40 +43,15 @@ export default function MyApp() {
           </Switch>
         </div>
       </Router>
-      {/* <Footer>
+      <Footer>
         <img
           src="/by.png"
           width="200"
           className="d-inline-block align-top"
           alt=""
         />
-      </Footer> */}
+      </Footer>
     </>
-  );
-}
-
-
-function Project() {
-  return (
-    <div className="background_project">
-      <h2>Project</h2>
-    </div>
-  );
-}
-
-function Experience() {
-  return (
-    <div className="background_experience">
-      <h2>Experience</h2>
-    </div>
-  );
-}
-
-function Contact() {
-  return (
-    <div className="background_contact">
-      <h2>Contact</h2>
-    </div>
   );
 }
 
